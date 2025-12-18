@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next AI Mermaid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#6366f1',
+              secondary: '#4f46e5',
+              dark: '#0f172a',
+              darker: '#020617',
+              panel: '#1e293b',
+              border: '#334155',
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* 全局隐藏滚动条（仅在需要时显示） */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+      }
+      
+      /* 仅在 hover 时显示滚动条 */
+      *:hover {
+        scrollbar-color: rgba(71, 85, 105, 0.3) transparent;
+      }
+      
+      /* Webkit 浏览器滚动条样式 */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 3px;
+      }
+      /* 仅在 hover 时显示 */
+      *:hover::-webkit-scrollbar-thumb {
+        background: rgba(71, 85, 105, 0.3);
+      }
+      *:hover::-webkit-scrollbar-thumb:hover {
+        background: rgba(71, 85, 105, 0.5);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "mermaid": "https://esm.sh/mermaid@^11.12.2",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "openai": "https://esm.sh/openai@^4.28.0",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-darker text-slate-200 h-screen w-screen overflow-hidden">
+    <div id="root" class="h-full w-full"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

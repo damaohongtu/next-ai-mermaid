@@ -1,0 +1,5 @@
+{
+  "name": "Next AI Mermaid",
+  "description": "An intelligent diagram generation tool using LLM to create, edit, and render Mermaid.js diagrams through natural language conversations.",
+  "requestFramePermissions": []
+}
