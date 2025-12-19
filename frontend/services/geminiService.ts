@@ -1,5 +1,5 @@
 // 后端 API 基础 URL
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://192.168.127.32:8502';
 
 interface GenerateDiagramRequest {
   prompt: string;
